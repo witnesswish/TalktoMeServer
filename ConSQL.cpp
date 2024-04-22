@@ -9,7 +9,7 @@ ConSQL::~ConSQL() {}
 int ConSQL::Mconnect(char *Sqlname)
 {
     mysql = mysql_init(NULL);
-    mysql = mysql_real_connect(mysql, "127.0.0.1", "root", "`12", Sqlname, 3306, NULL, 0);
+    mysql = mysql_real_connect(mysql, "127.0.0.1", "account_mysql", "password_mysql", Sqlname, 3306, NULL, 0);
     if(mysql == NULL)
     {
         perror("connect to msyql error: ");
